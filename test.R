@@ -5,5 +5,7 @@
 library(tidyverse)
 library(ggplot2)
 
+blah = 'blah'
+
 hello <- 'hello'
 hello
