@@ -1,0 +1,37 @@
+---
+title: "markd"
+output: html_document
+date: "2023-01-18"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+
+``` {r message = FALSE}
+library(tidyverse)
+library(ggplot2)
+
+limpetdata = read.csv('./data/limpet.csv')
+str(limpetdata)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+![possum](possumgif.gif)
+
+```{r}
+ggplot(limpetdata, aes(x=DENSITY, y=EGGS, colour=SEASON))+
+  geom_point(size=5, alpha=0.5)+
+```
+
+
